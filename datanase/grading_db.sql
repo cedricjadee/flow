@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2024 at 03:42 PM
+-- Generation Time: Dec 15, 2024 at 06:48 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `acc_tb` (
-  `a_id` int(11) NOT NULL,
+  `a_id` int(50) NOT NULL,
   `a_fn` varchar(50) DEFAULT NULL,
   `a_email` varchar(50) DEFAULT NULL,
   `a_password` varchar(250) DEFAULT NULL,
@@ -47,10 +47,10 @@ CREATE TABLE `acc_tb` (
 --
 
 INSERT INTO `acc_tb` (`a_id`, `a_fn`, `a_email`, `a_password`, `a_type`, `a_grade`, `a_gender`, `a_age`, `a_pc`, `a_pcn`, `a_image`, `a_status`) VALUES
-(7, 'Jhude Rubio', 'jhuderubio@gmail.com', '$2y$10$13wS.B0KhJnZm8c.Pkz.cOZaldhllNljzT2KvtTraItjaxaFmMzGW', 'staff', '123', 'male', 123, '123', '123', NULL, 'active'),
-(8, 'alfred', 'alfred@gmail.com', '$2y$10$JaP655xNgimMcwKGjxEgeu2iHlj0A0jiea/9LMjnAoWuaI.nCeU9y', 'admin', '', 'male', 123, '123', '123', NULL, 'active'),
-(10, 'kim', 'kim@gmail.com', '$2y$10$J2lkZSG2QVDpYyhP59EVrO1OxnxX28izUbSrQDu8J98UbblFn3Zou', 'student', '123', 'male', 123, '123', '123', NULL, 'active'),
-(11, 'jade', 'jade@gmail.com', '$2y$10$z2kN7nEczIbWF50t058pIe10MWEq7txBfpyGd97ZFkokSrPSie4ly', 'student', '213', 'male', 123, '123', '123', NULL, 'active');
+(1, 'Jhude Rubio', 'jhuderubio@gmail.com', '$2y$10$13wS.B0KhJnZm8c.Pkz.cOZaldhllNljzT2KvtTraItjaxaFmMzGW', 'staff', '123', 'male', 123, '123', '123', '123', 'active'),
+(2, 'alfred', 'alfred@gmail.com', '$2y$10$JaP655xNgimMcwKGjxEgeu2iHlj0A0jiea/9LMjnAoWuaI.nCeU9y', 'admin', '123', 'male', 123, '123', '123', '123', 'active'),
+(3, 'kim', 'kim@gmail.com', '$2y$10$J2lkZSG2QVDpYyhP59EVrO1OxnxX28izUbSrQDu8J98UbblFn3Zou', 'student', '123', 'male', 123, '123', '123', '213', 'active'),
+(4, 'jade', 'jade@gmail.com', '$2y$10$z2kN7nEczIbWF50t058pIe10MWEq7txBfpyGd97ZFkokSrPSie4ly', 'student', '213', 'male', 123, '123', '123', '123', 'active');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE `appeal_tb` (
   `ap_id` int(11) NOT NULL,
   `ap_message` longtext NOT NULL,
   `ap_status` varchar(50) NOT NULL,
-  `a_id` int(11) NOT NULL
+  `a_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -70,15 +70,10 @@ CREATE TABLE `appeal_tb` (
 --
 
 INSERT INTO `appeal_tb` (`ap_id`, `ap_message`, `ap_status`, `a_id`) VALUES
-(1, 'yawa', 'Accepted', 5),
-(2, 'diko kadawat grabi dakoa jud sa akong grado tapos ', 'Accepted', 10),
-(3, 'yati jud oy', 'Declined', 10),
-(4, 'diko musoghot asdlaskndklasndlkasndlkadlknaslkdnas', 'Declined', 10),
-(5, 'yati, dakoa nakog grado diko katuo because all I w', 'Declined', 10),
-(6, 'yati, dakoa nakog grado diko katuo because all I w', 'Declined', 7),
-(7, 'yati, dakoa nakog grado diko katuo because all I w', 'Declined', 7),
-(8, 'yati, dakoa nakog grado diko katuo because all I want for christmans is youuuuuuu, iloveyouuu', 'Pending', 7),
-(9, 'yati, dakoa nakog grado diko katuo because all I want for christmans is youuuuuuu, iloveyouuu aslndkjashdjkashdjkahsjkdhaskjdaskjdhaskjdhakjsdhuwqden,sdmaxcnpi9qhc osqalcx nsqlka clkqscqwiucsa cowq dcosjaq ,q iodfuh 1q2c dd doqui maskjhd n d  qwoije   jl m l jadn8dfn osajhd n oiasdk ', 'Declined', 7);
+(1, 'yawa', 'Accepted', 1),
+(2, 'diko kadawat grabi dakoa jud sa akong grado tapos ', 'Accepted', 2),
+(3, 'yati jud oy', 'Declined', 3),
+(4, 'diko musoghot asdlaskndklasndlkasndlkadlknaslkdnas', 'Declined', 4);
 
 -- --------------------------------------------------------
 
@@ -129,9 +124,9 @@ CREATE TABLE `grades_tb` (
 --
 
 INSERT INTO `grades_tb` (`g_id`, `a_id`, `g_science1`, `g_science2`, `g_science3`, `g_science4`, `g_math1`, `g_math2`, `g_math3`, `g_math4`, `g_programming1`, `g_programming2`, `g_programming3`, `g_programming4`, `g_reed1`, `g_reed2`, `g_reed3`, `g_reed4`, `g_prelim`, `g_midterm`, `g_prefinal`, `g_final`, `g_total`, `g_1`, `g_2`, `g_3`, `g_4`, `g_asd1`, `g_asd2`, `g_asd3`, `g_asd4`, `g_atay1`, `g_atay2`, `g_atay3`, `g_atay4`) VALUES
-(7, 0, 1.9, NULL, NULL, NULL, 1.4, NULL, NULL, NULL, 1.3, NULL, NULL, 0, 1.3, NULL, NULL, NULL, 1.4749999999999999, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, 10, 1.9, 3.2, 1.9, 3, 1.4, 1.4, 1.8, 1.4, 1.3, 1.2, 1.7, 1.2, 1.2, 2.4, 1.6, 2, 1.45, 2.05, 1.75, 1.9000000000000001, 1.7950000000000002, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9, 11, 1.9, 1.5, 2.5, 2.3, 1.8, 1.4, 1.8, 2.3, 1.7, 1.3, 2, 2, 1.6, 1.2, 3.1, 1.6, 1.75, 1.35, 2.35, 2.05, 1.94, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(1, 1, 1.9, NULL, NULL, NULL, 1.4, NULL, NULL, NULL, 1.3, NULL, NULL, 0, 1.3, NULL, NULL, NULL, 1.4749999999999999, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 2, 90, 89, 1.9, 3, 90, 75, 1.8, 1.4, 90, 87, 1.7, 1.2, 90, 88, 1.6, 2, 90, 84.75, 1.75, 1.9000000000000001, 36.045, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 3, 1.9, 1.5, 2.5, 2.3, 1.8, 1.4, 1.8, 2.3, 1.7, 1.3, 2, 2, 1.6, 1.2, 3.1, 1.6, 1.75, 1.35, 2.35, 2.05, 1.94, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -152,14 +147,10 @@ CREATE TABLE `notification_tb` (
 --
 
 INSERT INTO `notification_tb` (`n_id`, `ap_id`, `a_id`, `n_description`, `n_createdAt`) VALUES
-(1, 1, 5, 'Your appeal has been approved', ''),
-(2, 2, 10, 'Your appeal has been approved', ''),
-(3, 7, 7, 'Your appeal has been disapproved', ''),
-(4, 6, 7, 'Your appeal has been disapproved', ''),
-(5, 9, 7, 'Your appeal has been disapproved', ''),
-(6, 5, 10, 'Your appeal has been disapproved', ''),
-(7, 4, 10, 'Your appeal has been disapproved', ''),
-(8, 3, 10, 'Your appeal has been disapproved', '');
+(1, 1, 1, 'Your appeal has been approved', ''),
+(2, 2, 2, 'Your appeal has been approved', ''),
+(3, 3, 3, 'Your appeal has been disapproved', ''),
+(4, 4, 4, 'Your appeal has been disapproved', '');
 
 -- --------------------------------------------------------
 
@@ -181,8 +172,8 @@ CREATE TABLE `subjects_tb` (
 --
 
 INSERT INTO `subjects_tb` (`sub_id`, `sub_name`, `sub_code`, `sub_createdAt`, `a_id`, `g_id`) VALUES
-(1, 'asd', 'asd', '', 0, 0),
-(2, 'atay', 'atay', '2024-12-13 22:09:34', 5, 0);
+(1, 'asd', 'asd', '', 1, 1),
+(2, 'atay', 'atay', '2024-12-13 22:09:34', 2, 2);
 
 --
 -- Indexes for dumped tables
@@ -198,25 +189,31 @@ ALTER TABLE `acc_tb`
 -- Indexes for table `appeal_tb`
 --
 ALTER TABLE `appeal_tb`
-  ADD PRIMARY KEY (`ap_id`);
+  ADD PRIMARY KEY (`ap_id`),
+  ADD KEY `a_id` (`a_id`);
 
 --
 -- Indexes for table `grades_tb`
 --
 ALTER TABLE `grades_tb`
-  ADD PRIMARY KEY (`g_id`);
+  ADD PRIMARY KEY (`g_id`),
+  ADD KEY `a_id` (`a_id`);
 
 --
 -- Indexes for table `notification_tb`
 --
 ALTER TABLE `notification_tb`
-  ADD PRIMARY KEY (`n_id`);
+  ADD PRIMARY KEY (`n_id`),
+  ADD KEY `ap_id` (`ap_id`),
+  ADD KEY `a_id` (`a_id`);
 
 --
 -- Indexes for table `subjects_tb`
 --
 ALTER TABLE `subjects_tb`
-  ADD PRIMARY KEY (`sub_id`);
+  ADD PRIMARY KEY (`sub_id`),
+  ADD KEY `a_id` (`a_id`),
+  ADD KEY `g_id` (`g_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -226,7 +223,7 @@ ALTER TABLE `subjects_tb`
 -- AUTO_INCREMENT for table `acc_tb`
 --
 ALTER TABLE `acc_tb`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `a_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `appeal_tb`
@@ -251,6 +248,36 @@ ALTER TABLE `notification_tb`
 --
 ALTER TABLE `subjects_tb`
   MODIFY `sub_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `appeal_tb`
+--
+ALTER TABLE `appeal_tb`
+  ADD CONSTRAINT `appeal_tb_ibfk_1` FOREIGN KEY (`a_id`) REFERENCES `acc_tb` (`a_id`);
+
+--
+-- Constraints for table `grades_tb`
+--
+ALTER TABLE `grades_tb`
+  ADD CONSTRAINT `grades_tb_ibfk_1` FOREIGN KEY (`a_id`) REFERENCES `acc_tb` (`a_id`);
+
+--
+-- Constraints for table `notification_tb`
+--
+ALTER TABLE `notification_tb`
+  ADD CONSTRAINT `notification_tb_ibfk_1` FOREIGN KEY (`ap_id`) REFERENCES `appeal_tb` (`ap_id`),
+  ADD CONSTRAINT `notification_tb_ibfk_2` FOREIGN KEY (`a_id`) REFERENCES `acc_tb` (`a_id`);
+
+--
+-- Constraints for table `subjects_tb`
+--
+ALTER TABLE `subjects_tb`
+  ADD CONSTRAINT `subjects_tb_ibfk_1` FOREIGN KEY (`a_id`) REFERENCES `acc_tb` (`a_id`),
+  ADD CONSTRAINT `subjects_tb_ibfk_2` FOREIGN KEY (`g_id`) REFERENCES `grades_tb` (`g_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
