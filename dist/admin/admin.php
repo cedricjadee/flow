@@ -109,7 +109,8 @@ $conn->close();
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
-                        <h1 class="text-xl font-bold text-gray-900">Registrar</h1>
+                        <img src="../uploads/profiles/scc.png" alt="Logo" class="h-8 w-8 rounded-full">
+                        <span class="ml-2 text-xl font-semibold text-gray-800">Registrar</span>
                     </div>
                     <div class="flex items-center">
                         <button onclick="window.location.href='../auth/login.php'"

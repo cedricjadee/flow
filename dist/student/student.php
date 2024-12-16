@@ -187,7 +187,7 @@ $conn->close();
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="https://via.placeholder.com/40" alt="Logo" class="h-8 w-8 rounded-full">
+                    <img src="../uploads/profiles/scc.png" alt="Logo" class="h-8 w-8 rounded-full">
                     <span class="ml-2 text-xl font-semibold text-gray-800">Student Portal</span>
                 </div>
                 <div class="flex items-center space-x-4">

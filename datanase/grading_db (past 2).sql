@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2024 at 07:55 AM
+-- Generation Time: Dec 15, 2024 at 06:48 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,10 +47,10 @@ CREATE TABLE `acc_tb` (
 --
 
 INSERT INTO `acc_tb` (`a_id`, `a_fn`, `a_email`, `a_password`, `a_type`, `a_grade`, `a_gender`, `a_age`, `a_pc`, `a_pcn`, `a_image`, `a_status`) VALUES
-(1, 'Jhude Rubio', 'jhuderubio@gmail.com', '$2y$10$13wS.B0KhJnZm8c.Pkz.cOZaldhllNljzT2KvtTraItjaxaFmMzGW', 'staff', '', 'Male', 20, '123', '123', 'profile_675fcdb226d2c1.26687409.jpg', 'active'),
-(2, 'Alfred Cornesio', 'alfred@gmail.com', '$2y$10$JaP655xNgimMcwKGjxEgeu2iHlj0A0jiea/9LMjnAoWuaI.nCeU9y', 'admin', '', 'Male', 20, '123', '123', '123', 'active'),
-(3, 'Kimberly Cañon', 'kim@gmail.com', '$2y$10$J2lkZSG2QVDpYyhP59EVrO1OxnxX28izUbSrQDu8J98UbblFn3Zou', 'student', 'BSIT 3', 'Female', 20, 'Alfred Cornesio', '0945-258-6033', '3_1734331782.jpg', 'active'),
-(4, 'Cedric Jade P. Getuaban', 'jade@gmail.com', '$2y$10$z2kN7nEczIbWF50t058pIe10MWEq7txBfpyGd97ZFkokSrPSie4ly', 'student', 'BSIT 3', 'Male', 20, 'Alfred Cornesio', '0945-258-6033', '4_1734332025.jpg', 'active');
+(1, 'Jhude Rubio', 'jhuderubio@gmail.com', '$2y$10$13wS.B0KhJnZm8c.Pkz.cOZaldhllNljzT2KvtTraItjaxaFmMzGW', 'staff', '123', 'male', 123, '123', '123', '123', 'active'),
+(2, 'alfred', 'alfred@gmail.com', '$2y$10$JaP655xNgimMcwKGjxEgeu2iHlj0A0jiea/9LMjnAoWuaI.nCeU9y', 'admin', '123', 'male', 123, '123', '123', '123', 'active'),
+(3, 'kim', 'kim@gmail.com', '$2y$10$J2lkZSG2QVDpYyhP59EVrO1OxnxX28izUbSrQDu8J98UbblFn3Zou', 'student', '123', 'male', 123, '123', '123', '213', 'active'),
+(4, 'jade', 'jade@gmail.com', '$2y$10$z2kN7nEczIbWF50t058pIe10MWEq7txBfpyGd97ZFkokSrPSie4ly', 'student', '213', 'male', 123, '123', '123', '123', 'active');
 
 -- --------------------------------------------------------
 

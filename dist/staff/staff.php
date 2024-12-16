@@ -253,9 +253,7 @@ $conn->close();
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&q=80&w=50&h=50"
-                            alt="School Logo"
-                            class="h-8 w-auto">
+                    <img src="../uploads/profiles/scc.png" alt="Logo" class="h-8 w-8 rounded-full">
                         <span class="ml-2 text-xl font-bold text-gray-900">Academic Portal</span>
                     </div>
                 </div>
